@@ -10,3 +10,6 @@ The aim of this project realized by members of Artificial Intelligence Society ,
 4. We compare whether the price is the lowest in e.g. a month, two weeks, etc. and then the inscription appears whether it is worth buying (in future more advanced methods can be implemented).
 
 To detect the pirce tags we use YOLOv8 architesture from the [`ultralytics`](https://github.com/ultralytics/ultralytics) library implementation.
+
+### Contents
+`Demo.ipynb` notebook contains a short demo on how to use ultralytics YOLOv8 model in practice.
