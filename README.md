@@ -20,7 +20,7 @@ For labeling our custom dataset we used different labeling software:
 
 ### Contents
 
-- `Demo.ipynb` notebook contains a short demo on how to use ultralytics YOLOv8 model in practice.
+- `demo.ipynb` notebook contains a short demo on how to use ultralytics YOLOv8 model in practice.
 - `scripts` folder contains helpful code splited into modules.
 - `config.yaml` is a file used for YOLO configuration. To use it, its necessary to add a absolute path to the root directory. Below the paths we need to specify the classes to detect. In the current version of our model there are 3 classes: `circlek` (Circle K's gas station logo), `orlen` (Orlen's gas station logo) and `prices` (detects the price tag).
 - `.gitignore` contains all files that should be ignored by the git repository. If you are not adding such file to your repos, it is worth to change this.
