@@ -7,13 +7,14 @@ from ultralytics.yolo.engine.model import YOLO
 from math import ceil, sqrt
 
 
-def plot_results(results: List[Results], model: YOLO) -> None:
+def plot_results(model: YOLO, image: str) -> None:
     """Takes results and the model and plots the results.
 
     Args:
-        results (List[Results]): List of results.
+        image (str): Path to image.
         model (YOLO): Model which results will be plotted.
     """
+    results = model(image)
     for result in results:
         img = result.orig_img
 
