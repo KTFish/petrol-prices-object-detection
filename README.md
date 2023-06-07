@@ -13,4 +13,13 @@ To detect the pirce tags we use YOLOv8 architesture from the [`ultralytics`](htt
 
 ### Labeling the data
 
-For labeling our custom dataset we used (cvat)[https://app.cvat.ai/].
+For labeling our custom dataset we used different labeling software:
+
+- (cvat)[https://app.cvat.ai/]
+- (roboflow)[https://universe.roboflow.com/]
+
+### Contents
+
+`Demo.ipynb` notebook contains a short demo on how to use ultralytics YOLOv8 model in practice.
+`scripts` folder contains helpful code splited into modules.
+`config.yaml` is a file used for YOLO configuration. To use it, its necessary to add a absolute path to the root directory. Below the paths we need to specify the detected classes. In the current version of our model there are 3 classes:
