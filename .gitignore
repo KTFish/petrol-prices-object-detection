@@ -1,0 +1,14 @@
+*jpg
+*png
+*__pycache__
+*\data
+*.pth
+*pt
+*\labelImg
+*\yolov5
+
+\runs
+
+\env
+\datasets
+*\temp.py
