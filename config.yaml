@@ -1,0 +1,10 @@
+# Use absolute path!!!
+path: C:\Users\janek\notebooks\petrol-prices-object-detection\custom_data\roboflow # dataset root dir
+train: C:\Users\janek\notebooks\petrol-prices-object-detection\custom_data\roboflow/images/train
+val: C:\Users\janek\notebooks\petrol-prices-object-detection\custom_data\roboflow/images/valid
+
+# Classes
+names:
+  0: circlek
+  1: orlen
+  2: prices
