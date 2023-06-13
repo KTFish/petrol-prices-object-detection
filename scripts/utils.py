@@ -55,4 +55,18 @@ def plot_results_one_fig(model: YOLO, dir: str) -> None:
     plt.show()
 
 
+def load_model_run(run_id: int) -> YOLO:
+    """Takes a run id and returns the best model version trained in that run.
+
+    Args:
+        run_id (int): id number of the run, used to get the path to the model.
+
+    Returns:
+        YOLO: Returns a loaded ultralytics YOLOv8 model.
+    """
+    path_to_trained_model = rf"runs\detect\train{run_id}\weights\best.pt"
+    model = YOLO(path_to_trained_model)
+    return model
+
+
 # TODO: Function to check if every image has a label (os.listdir can be helpfull)
