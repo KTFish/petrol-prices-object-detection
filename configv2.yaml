@@ -4,8 +4,12 @@ train: C:\Users\janek\notebooks\petrol-prices-object-detection\custom_data\robof
 val: C:\Users\janek\notebooks\petrol-prices-object-detection\custom_data\roboflow\dataset-v2\valid\images
 
 # Classes
+# circlek - Logo of Circle K station
+# orlen - Logo of Orlen station
+# circlek - Price tag on a station
+# circlek - Logo of Wild Bean station
 names:
   0: circlek
   1: orlen
   2: prices
-  4: widl-bean
+  3: widl-bean
