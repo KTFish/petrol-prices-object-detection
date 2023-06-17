@@ -7,6 +7,23 @@ from ultralytics.yolo.engine.model import YOLO
 from math import ceil, sqrt
 
 
+def get_size(model_path: str, verbose: bool = False) -> float:
+    """Returns the size of the model in MB.
+
+    Args:
+        model_path (str): Paht to YOLO model.
+        verbose (bool, optional): If set to True prints out information about the model size. Defaults to False.
+
+    Returns:
+        float: Model size.
+    """
+
+    size_mb = os.path.getsize(model_path) / 1024**2  # bytes to megabytes
+    if verbose:
+        print(f"Size of the model: {size_mb:.2f} MB.")
+    return size_mb
+
+
 def plot_results(model: YOLO, image: str) -> None:
     """Takes results and the model and plots the results.
 
@@ -15,10 +32,10 @@ def plot_results(model: YOLO, image: str) -> None:
         model (YOLO): Model which results will be plotted.
     """
     results = model(image)
-    for result in results:
-        img = result.orig_img
+    for res in results:
+        img = res.orig_img
 
-        res = model(img)
+        # res = model(img)
         res_plotted = res[0].plot()
         plt.imshow(cv2.cvtColor(res_plotted, cv2.COLOR_BGR2RGB))
         plt.axis(False)
