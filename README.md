@@ -29,6 +29,9 @@ For labeling our custom dataset we used different labeling software:
 - [roboflow](https://universe.roboflow.com/) - Its a website which enables to annotate images. The biggest advantage is a user friendly interface, build in data augmentation and auto labelling (I didn't tested the last for now). It also allows cooparate with your friends during the labeling process. The downside of it is that your dataset will be publicly available if you do not pay a subscription. However, for such small priate projects it is acceptable trade off.
 - [labelImg](https://github.com/heartexlabs/labelImg) - Is a great GitHub repository for labeling images.The greatest adventage of it is the cost, it is free.
 
+### OCR
+ - [Tesseract](whttps://github.com/tesseract-ocr/tesseract) was used for performing OCR.
+
 ### Contents
 
 - `demo.ipynb` notebook contains a short demo on how to use ultralytics YOLOv8 model in practice.
