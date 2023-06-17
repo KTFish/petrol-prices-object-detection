@@ -20,7 +20,7 @@ def get_size(model_path: str, verbose: bool = False) -> float:
 
     size_mb = os.path.getsize(model_path) / 1024**2  # bytes to megabytes
     if verbose:
-        print(f"Size of the model: {size_mb:.2f} MB.")
+        print(f"Size of the model: ~{size_mb:.2f} MB.")
     return size_mb
 
 
@@ -87,3 +87,11 @@ def load_model_run(run_id: int) -> YOLO:
 
 
 # TODO: Function to check if every image has a label (os.listdir can be helpfull)
+
+
+def save_image(image_array, file_path):
+    # Convert the image array to BGR format for OpenCV
+    image_bgr = cv2.cvtColor(image_array, cv2.COLOR_RGB2BGR)
+
+    # Save the image as a .jpg file
+    cv2.imwrite(file_path, image_bgr)
