@@ -77,12 +77,6 @@ def perform_ocr(image_array: np.array) -> str:
     # Increase contrast
     image = increase_contrast(grayscale_image)
 
-    # Apply denoising using the Bilateral Filter
-    denoised_image = cv2.bilateralFilter(grayscale_image, 5, 75, 75)
-
-    # Apply smoothing using Gaussian Blur
-    # smoothed_image = cv2.GaussianBlur(denoised_image, (5, 5), 0)
-
     plt.imshow(image, cmap="gray")
     plt.axis(False)
     plt.show()
