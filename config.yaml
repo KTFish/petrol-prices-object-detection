@@ -1,10 +1,25 @@
 # Use absolute path!!!
-path: C:\Users\janek\notebooks\petrol-prices-object-detection\custom_data\roboflow # dataset root dir
-train: C:\Users\janek\notebooks\petrol-prices-object-detection\custom_data\roboflow/images/train
-val: C:\Users\janek\notebooks\petrol-prices-object-detection\custom_data\roboflow/images/valid
+path: C:\Users\janek\notebooks\petrol-prices-object-detection\custom_data\roboflow\dataset-v3 # dataset root dir
+train: ../train/images
+val: ../valid/images
+test: ../test/images
 
 # Classes
+# circlek - Logo of Circle K station
+# orlen - Logo of Orlen station
+# circlek - Price tag on a station
+# wild-bean - Logo of Wild Bean station
 names:
-  0: circlek
-  1: orlen
-  2: prices
+  [
+    "95",
+    "circlek",
+    "cost",
+    "disel",
+    "efecta-diesel",
+    "lpg",
+    "orlen",
+    "prices",
+    "verva-98",
+    "verva-diesel",
+    "wild-bean",
+  ]
