@@ -1,5 +1,6 @@
 import cv2
 import os
+import wandb
 import matplotlib.pyplot as plt
 from typing import List
 from ultralytics.yolo.engine.results import Results
@@ -69,4 +70,37 @@ def load_model_run(run_id: int) -> YOLO:
     return model
 
 
-# TODO: Function to check if every image has a label (os.listdir can be helpfull)
+def load_model_from_wandb(
+    project: str,
+    team: str = "czarna_magia",
+    verbose: bool = False,
+    model_name: str = "yolo:v0",
+) -> YOLO:
+    """Loads YOLO model from wandb.ai using artifacts.
+
+    Args:
+        project (str): Name of your project.
+        team (str, optional): Name of team. Defaults to "czarna_magia".
+        verbose (bool, optional): Prints information that the model was loaded. Defaults to False.
+
+    Returns:
+        YOLO: Ultralytics yolo model.
+    """
+    # Initialize wandb run
+    run = wandb.init(project=project)
+
+    # Load artifact
+    model_artifact = run.use_artifact(f"{team}/{project}/{model_name}", type="model")
+    artifact_dir = model_artifact.download()
+
+    # Initalize YOLO model
+    weights_path = f"{artifact_dir}/best.pt"  # Access best possible weights
+    model = YOLO(weights_path)
+
+    # Check if the model is loaded properly
+    assert type(model) == YOLO
+
+    if verbose:
+        print(f"[INFO] {weights_path} loaded from wandb.ai")
+
+    return model
