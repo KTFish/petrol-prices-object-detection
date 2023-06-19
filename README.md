@@ -11,15 +11,11 @@ The aim of this project realized by members of Artificial Intelligence Society ,
 3. Then [OCR](https://en.wikipedia.org/wiki/Optical_character_recognition) is performed to get the numbers out of the detected price tag.
 4. We compare whether the price is the lowest in e.g. a month, two weeks, etc. and then the inscription appears whether it is worth buying (in future more advanced methods can be implemented).
 
-To detect the pirce tags we use YOLOv8 architesture from the [ultralytics](https://github.com/ultralytics/ultralytics) library implementation.
+To detect the pirce tags we use YOLOv8 architesture from the [`ultralytics`](https://github.com/ultralytics/ultralytics) library implementation.
 
 # Technology
 
 ### YOLO Model
-
-<!--
-Describe how YOLO model works from helicopter view...
---!>
 
 ### Labeling the data
 
@@ -36,6 +32,7 @@ For labeling our custom dataset we used different labeling software:
 - `config.yaml` is a file used for YOLO configuration. To use it, its necessary to add a absolute path to the root directory. Below the paths we need to specify the classes to detect. In the current version of our model there are 3 classes: `circlek` (Circle K's gas station logo), `orlen` (Orlen's gas station logo) and `prices` (detects the price tag).
 - `.gitignore` contains all files that should be ignored by the git repository. If you are not adding such file to your repos, it is worth to change this.
 - `runs\detect` - contains informations about the training. That is the model weights, confusion matrix (and other helpful images) and the results in a `.csv` file.
+- `ocr.py`
 
 ### Examples
 
