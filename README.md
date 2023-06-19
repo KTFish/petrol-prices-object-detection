@@ -11,7 +11,7 @@ The aim of this project realized by members of Artificial Intelligence Society ,
 3. Then [OCR](https://en.wikipedia.org/wiki/Optical_character_recognition) is performed to get the numbers out of the detected price tag.
 4. We compare whether the price is the lowest in e.g. a month, two weeks, etc. and then the inscription appears whether it is worth buying (in future more advanced methods can be implemented).
 
-To detect the pirce tags we use YOLOv8 architesture from the [`ultralytics`](https://github.com/ultralytics/ultralytics) library implementation.
+To detect the pirce tags we use YOLOv8 architesture from the [ultralytics](https://github.com/ultralytics/ultralytics) library implementation.
 
 # Technology
 
