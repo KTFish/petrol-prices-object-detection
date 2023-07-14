@@ -23,6 +23,18 @@ To detect the pirce tags we use YOLOv8 architesture from the [`ultralytics`](htt
 
 
 ### Components
+#### Scripts
+| Script Name | Description                                                                                                                                                                                                                   |
+| ----------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| deploy.py   | All logic needed for **deploying** the app. For now only in [Hugging Face Spaces]([[https://huggingface.co/spaces](https://huggingface.co/spaces)](https://huggingface.co/spaces](https://huggingface.co/spaces))) as a demo. |
+| utils.py    | **Helper** functions for laoding the model, plotting results etc.                                                                                                                                                             |
+| train.py    | Functions for **training** of the model.                                                                                                                                                                                      |
+| predict.py  | Functions used for **inference**.                                                                                                                                                                                             |
+| ocr.py      | Functions necessary for performing **ocr** and helper functions for processing the image like **cropping**.                                                                                                                   |
+|             |                                                                                                                                                                                                                               
+
+
+#### Other
 |  Component  |                                                                                                                                                                  Description                                                                                                                                                                 |
 |:-----------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
 | `config.yaml` | is a file used for YOLO configuration. To use it, its necessary to add a absolute path to the root directory. Below the paths we need to specify the classes to detect. In the current version of our model there are 3 classes: circlek (Circle K's gas station logo), orlen (Orlen's gas station logo) and prices (detects the price tag). |
@@ -44,6 +56,8 @@ For labeling our custom dataset we used different labeling software:
 - OCR wasn't working on the whole price pylon, so it was necessary to label the specific prices and retrain the model.
 
 ### Examples
+#### Prediciton of individual prices
 <div style="text-align: center;">
     <img src="./figures/prediction-example-1.png">
 </div>
+On the example above we can se that the model struggles to detect all indivitual prices. It is far easier to detect the whole price tag. Hovever, the OCR does not perform well on such result.
