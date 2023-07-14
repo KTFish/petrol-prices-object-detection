@@ -44,4 +44,6 @@ For labeling our custom dataset we used different labeling software:
 - OCR wasn't working on the whole price pylon, so it was necessary to label the specific prices and retrain the model.
 
 ### Examples
-...
+<div style="text-align: center;">
+    <img src="./figures/prediction-example-1.png">
+</div>
