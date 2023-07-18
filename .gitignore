@@ -19,3 +19,6 @@
 
 # Roboflow API Key
 secret.py
+
+# Dataset (downloaded from Roboflow)
+Petrol-tags-detection.-*
