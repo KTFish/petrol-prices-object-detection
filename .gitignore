@@ -13,6 +13,8 @@
 \artifacts
 
 \env
+\env*
+\artifacts
 \datasets
 *\temp.py
 *.csv
